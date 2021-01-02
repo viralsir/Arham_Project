@@ -1,4 +1,24 @@
 {% extends "course/layout.html" %}
 {% block body %}
     <h1> View Course Page</h1>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th> Id</th>
+                <th> Name </th>
+                <th> course</th>
+                <th> Fees </th>
+            </tr>
+        </thead>
+        {% for course in courses %}
+            <tr>
+                <td>{{ course.id }}
+                <td>{{ course.name }}
+                <td>{{ course.courses }}
+                <td>{{ course.fees }}
+            </tr>
+        {% endfor %}
+
+    </table>
+    <a href="{% url 'course_add' %}"> add course</a>
 {% endblock %}
